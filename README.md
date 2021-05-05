@@ -79,6 +79,6 @@ Notice the "ligations on thermocycler" next to "source:" and the "rescue_require
 
 ## Files and Structure
 
-Each page has its own HTML and Javascript file; however, they all share one CSS file. With the exception of PCR, each one is named [step].html and [step_scripts].js. The HTML file for PCR is called "index.html" because this is the way GitHub Pages identifies the which page to host. The functions for adding additional text input boxes and for generating the final LabSheets are all contained in the corresponding Javascript files.
+Each page has its own HTML and Javascript file; however, they all share one CSS file. With the exception of PCR, each one is named [step].html and [step_scripts].js. The HTML file for PCR is called "index.html" because this is the way GitHub Pages identifies the which page to host. The functions for adding additional text input boxes and for generating the final LabSheets are all contained in the corresponding Javascript files. The functions in pcr_scripts.js are commented; the rest are not, as they all follow similar structures.
 
 
