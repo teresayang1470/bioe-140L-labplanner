@@ -49,7 +49,7 @@ function add_source_row() {
     location.appendChild(t2);
 }
 
-var dest_rows = 5;
+var dest_rows = 3;
 function add_dest_row() {
     dest_rows++;
     
@@ -185,8 +185,8 @@ function generate_sheet() {
         var label = row.insertCell(0);
         label.innerHTML = document.getElementById("dest_label_" + (i + 1)).value;
         
-        var label = row.insertCell(1);
-        label.innerHTML = document.getElementById("concentration_" + (i + 1)).value;
+        var concentration = row.insertCell(1);
+        concentration.innerHTML = document.getElementById("concentration_" + (i + 1)).value;
         
         var location = row.insertCell(2);
         location.innerHTML = document.getElementById("dest_loc_" + (i + 1)).value;

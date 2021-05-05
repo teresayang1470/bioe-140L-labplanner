@@ -53,7 +53,7 @@ function add_sample_row() {
 function generate_sheet() {
     // heading
     var title = document.getElementById("expt_title");
-    title.innerHTML = document.getElementById("expt_name").value + "/" + document.getElementById("part_name").value + ": Assembly";
+    title.innerHTML = document.getElementById("expt_name").value + "/" + document.getElementById("part_name").value + ": Transform";
     title.style.fontSize = "16pt";
     title.style.fontWeight = "bold";
     title.appendChild(document.createElement("br"));
