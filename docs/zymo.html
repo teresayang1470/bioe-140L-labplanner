@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LabPlanner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="zymo_scripts.js"></script>
+</head>
+
+<ul>
+    <li><a href="transform.html">Transform</a></li>
+    <li><a href="assembly.html">Assembly</a></li>
+    <li><a href="zymo.html">Zymo</a></li>
+    <li><a href="gel.html">Gel</a></li>
+    <li><a href="index.html">PCR</a></li>
+    <li style="float:left"><a>LabPlanner: Zymo</a></li>
+</ul>
+
+<body>
+    <h2>3. Zymo</h2>
+        <label for="protocol">Experiment Name: </label>
+        <input type="text" id="expt_name" name="expt_name"><br><br>
+        <label for="protocol">Part Name: </label>
+        <input type="text" id="part_name" name="part_name" placeholder="ex. &quot;ortholog1-5&quot;">
+        <br><br>
+        <label for="protocol">Source: </label>
+        <input type="text" id="source" name="source"><br><br><br><br>
+
+        <label>Samples:</label><br><br>
+        <table id="samples">
+          <tr>
+            <th>reaction</th>
+            <th>label</th>
+            <th>side_label</th>
+            <th>elution_volume</th>
+            <th>destination</th>
+
+          </tr>
+          <tr>
+            <td><input type="text" id="rxn_1" name="rxn_1"></td>
+            <td><input type="text" id="label_1" name="label_1"></td>
+            <td><input type="text" id="side_label_1" name="side_label_1"></td>
+            <td><input type="text" id="elution_vol_1" name="elution_vol_1"></td>
+            <td><input type="text" id="destination_1" name="destination_1"></td>
+          </tr>
+          <tr>
+              <td><input type="text" id="rxn_2" name="rxn_2"></td>
+              <td><input type="text" id="label_2" name="label_2"></td>
+              <td><input type="text" id="side_label_2" name="side_label_2"></td>
+              <td><input type="text" id="elution_vol_2" name="elution_vol_2"></td>
+              <td><input type="text" id="destination_2" name="destination_2"></td>
+          </tr>
+          <tr>
+              <td><input type="text" id="rxn_3" name="rxn_3"></td>
+              <td><input type="text" id="label_3" name="label_3"></td>
+              <td><input type="text" id="side_label_3" name="side_label_3"></td>
+              <td><input type="text" id="elution_vol_3" name="elution_vol_3"></td>
+              <td><input type="text" id="destination_3" name="destination_3"></td>
+          </tr>
+        </table>
+        
+        <button type="button" onclick="add_sample_row()">+</button>
+        
+        <br><br><br>
+      <button type="button" onclick="generate_sheet()" style="padding:10px 10px">Generate Labsheet</button>
+    
+    <br><br><br>
+    <p id="expt_title" class="output"> </p>
+    
+    <p id="source_text" class="output"> </p>
+    
+    <p id="sample_title" class="output"> </p>
+    <table id="sheet_samples" class="output">
+    </table>
+</body>
+
+</html>

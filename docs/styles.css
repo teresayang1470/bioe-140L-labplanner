@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Calibri&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+h1, h2, h3, h4, h5 {
+    font-family: "Montserrat";
+}
+
+body {
+    font-family: "Lato";
+    margin-left:100px;
+    margin-right:100px;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+label {
+    font-weight:bold;
+}
+
+table {
+    text-align:left;
+    border-spacing:5px;
+    vertical-align:bottom;
+}
+
+th {
+    font-style:italic;
+    font-weight:normal;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: -100px;
+  margin-top: 0px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+input[type=submit] {
+    background-color: #333;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 10px 10px;
+}
+
+.output {
+    font-family: "Calibri";
+    font-size: "12pt";
+}

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LabPlanner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="pcr_scripts.js"></script>
+</head>
+
+<ul>
+    <li><a href="transform.html">Transform</a></li>
+    <li><a href="assembly.html">Assembly</a></li>
+    <li><a href="zymo.html">Zymo</a></li>
+    <li><a href="gel.html">Gel</a></li>
+    <li><a href="index.html">PCR</a></li>
+    <li style="float:left"><a>LabPlanner: PCR</a></li>
+</ul>
+
+<body>
+    <h2>1. PCR</h2>
+        <label for="protocol">Experiment Name: </label>
+        <input type="text" id="expt_name" name="expt_name"><br><br>
+        <label for="protocol">Part Name: </label>
+        <input type="text" id="part_name" name="part_name" placeholder="ex. &quot;ortholog1-5&quot;">
+        <br><br>
+        <label for="protocol">Protocol: </label>
+        <input type="text" id="protocol" name="protocol" value="PrimeStar GXL"><br><br>
+            
+        <label for="programs">Program:</label>
+        <select name="programs" id="programs">
+            <option value="PG2K55">PG2K55</option>
+            <option value="PG3K55">PG3K55</option>
+            <option value="PG4K55">PG4K55</option>
+            <option value="PG5K55">PG5K55</option>
+            <option value="PG6K55">PG6K55</option>
+            <option value="PGXL4">PGXL4</option>
+        </select>
+        <br><br>
+        <table border='1' style='border-collapse:collapse'>
+            <tr>
+                <th>&nbsp; &nbsp; Program &nbsp; &nbsp;</th>
+                <th>&nbsp; &nbsp; Product Length &nbsp; &nbsp;</th>
+            </tr>
+            <tr>
+                <td>&nbsp; &nbsp;PG2K55&nbsp; &nbsp;</td>
+                <td>&nbsp; &nbsp;&#8804; 2kb</td>
+            </tr>
+            <tr>
+                <td>&nbsp; &nbsp;PG3K55&nbsp; &nbsp;</td>
+                <td>&nbsp; &nbsp;&gt; 2kb, &nbsp; &#8804; 3kb</td>
+            </tr>
+            <tr>
+                <td>&nbsp; &nbsp;PG4K55&nbsp; &nbsp;</td>
+                <td>&nbsp; &nbsp;&gt; 3kb, &nbsp; &#8804; 4kb</td>
+            </tr>
+            <tr>
+                <td>&nbsp; &nbsp;PG5K55&nbsp; &nbsp;</td>
+                <td>&nbsp; &nbsp;&gt; 4kb, &nbsp; &#8804; 5kb</td>
+            </tr>
+            <tr>
+                <td>&nbsp; &nbsp;PG6K55&nbsp; &nbsp;</td>
+                <td>&nbsp; &nbsp;&gt; 5kb, &nbsp; &#8804; 6kb</td>
+            </tr>
+            <tr>
+                <td>&nbsp; &nbsp;PGXL4&nbsp; &nbsp;</td>
+                <td>&nbsp; &nbsp;&gt; 6kb</td>
+            </tr>
+        </table>
+        <br><br><br>
+
+        <label>Samples:</label><br><br>
+        <table id="samples">
+          <tr>
+            <th>label</th>
+            <th>primer1</th>
+            <th>primer2</th>
+            <th>template</th>
+            <th>product</th>
+          </tr>
+          <tr>
+            <td><input type="text" id="label_1" name="label_1"></td>
+            <td><input type="text" id="primer1_1" name="primer1_1"></td>
+            <td><input type="text" id="primer2_1" name="primer2_1"></td>
+            <td><input type="text" id="template_1" name="template_1"></td>
+            <td><input type="text" id="product_1" name="product_1"></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="label_2" name="label_2"></td>
+            <td><input type="text" id="primer1_2" name="primer1_2"></td>
+            <td><input type="text" id="primer2_2" name="primer2_2"></td>
+            <td><input type="text" id="template_2" name="template_2"></td>
+            <td><input type="text" id="product_2" name="product_2"></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="label_3" name="label_3"></td>
+            <td><input type="text" id="primer1_3" name="primer1_3"></td>
+            <td><input type="text" id="primer2_3" name="primer2_3"></td>
+            <td><input type="text" id="template_3" name="template_3"></td>
+            <td><input type="text" id="product_3" name="product_3"></td>
+          </tr>
+        </table>
+        
+        <button type="button" onclick="add_sample_row()">+</button>
+        
+        <br><br><br>
+        
+        <label>Source:</label><br><br>
+        <table id="source">
+          <tr>
+            <th>label</th>
+            <th>location</th>
+          </tr>
+          <tr>
+            <td><input type="text" id="src_label_1" name="src_label_1" value=></td>
+            <td><input type="text" id="src_loc_1" name="src_loc_1"></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="src_label_2" name="src_label_2"></td>
+            <td><input type="text" id="src_loc_2" name="src_loc_2"></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="src_label_3" name="src_label_3"></td>
+            <td><input type="text" id="src_loc_3" name="src_loc_3"></td>
+          </tr>
+        </table>
+        
+        <button type="button" onclick="add_source_row()">+</button>
+        
+        <br><br><br>
+        
+        <label>Destination:</label><br><br>
+        <table id="destination">
+          <tr>
+            <th>label</th>
+            <th>concentration</th>
+            <th>location</th>
+          </tr>
+          <tr>
+            <td><input type="text" id="dest_label_1" name="dest_label_1" value=></td>
+            <td><input type="text" id="concentration_1" name="concentration_1" value=></td>
+            <td><input type="text" id="dest_loc_1" name="dest_loc_1"></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="dest_label_2" name="dest_label_2"></td>
+            <td><input type="text" id="concentration_2" name="concentration_2" value=></td>
+            <td><input type="text" id="dest_loc_2" name="dest_loc_2"></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="dest_label_3" name="dest_label_3"></td>
+            <td><input type="text" id="concentration_3" name="concentration_3" value=></td>
+            <td><input type="text" id="dest_loc_3" name="dest_loc_3"></td>
+          </tr>
+        </table>
+        
+        <button type="button" onclick="add_dest_row()">+</button>
+        
+        <br><br><br>
+      <button type="button" onclick="generate_sheet()" style="padding:10px 10px">Generate Labsheet</button>
+    
+    <br><br><br>
+    <p id="expt_title" class="output"> </p>
+    
+    <p id="protocol_text" class="output"> </p>
+    <p id="program_text" class="output"> </p>
+    
+    <p id="sample_title" class="output"> </p>
+    <table id="sheet_samples" class="output">
+    </table>
+    
+    <p id="source_title" class="output"> </p>
+    <table id="sheet_source" class="output">
+    </table>
+    
+    <p id="dest_title" class="output"> </p>
+    <table id="sheet_dest" class="output">
+    </table>
+</body>
+
+</html>
