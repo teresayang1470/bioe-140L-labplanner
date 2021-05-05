@@ -19,11 +19,15 @@
 <body>
     <h2>5. Transform</h2>
         <label for="protocol">Experiment Name: </label>
-        <input type="text" id="expt_name" name="expt_name"><br><br>
-        <label for="protocol">Part Name: </label>
+        <input type="text" id="expt_name" name="expt_name" placeholder="ex. &quot;APAP3&quot;"><br><br>
+            
+        <label for="protocol">Name of Parts: </label>
         <input type="text" id="part_name" name="part_name" placeholder="ex. &quot;ortholog1-5&quot;"><br><br>
-        <label for="protocol">Ligations on thermocycler? </label>
+            
+        <label for="protocol" class="tooltip">Ligations on thermocycler?
+            <span class="tooltiptext">check box if results of assembly are still on thermocycler; if yes, no need to specify locations in source section</span></label>
         <input type="checkbox" id="ligations" name="ligations"> <br><br>
+            
         <label for="protocol">Rescue required? </label>
         <input type="checkbox" id="rescue" name="rescue">
         <br><br><br>
@@ -32,7 +36,8 @@
         <table id="source">
           <tr>
             <th>label</th>
-            <th>location</th>
+            <th class="tooltip">location
+                <span class="tooltiptext">location after assembly; if still on thermocycler, no need to list here</span></th>
           </tr>
           <tr>
             <td><input type="text" id="src_label_1" name="src_label_1" value=></td>
@@ -55,11 +60,16 @@
         <label>Samples:</label><br><br>
         <table id="samples">
           <tr>
-            <th>label</th>
-            <th>product</th>
-            <th>strain</th>
-            <th>antibiotic</th>
-            <th>incubate</th>
+            <th class="tooltip">label
+                <span class="tooltiptext">label on tube</span></th>
+            <th class="tooltip">product
+                <span class="tooltiptext">name of assembled part from assembly step</span></th>
+            <th class="tooltip">strain
+                <span class="tooltiptext">ex. Mach1</span></th>
+            <th class="tooltip">antibiotic
+                <span class="tooltiptext">ex. Amp</span></th>
+            <th class="tooltip">incubate
+                <span class="tooltiptext">incubation temperature</span></th>
 
           </tr>
           <tr>

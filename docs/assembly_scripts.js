@@ -183,4 +183,10 @@ function generate_sheet() {
         product.innerHTML = document.getElementById("product_" + (i + 1)).value;
     }
     samples.appendChild(document.createElement("br"));
+    
+    var title = document.getElementById("dest_title");
+    title.innerHTML = "destination: " + document.getElementById("dest").value;
+    
+    var title = document.getElementById("program_title");
+    title.innerHTML = "program: " + document.getElementById("program").value;
 }

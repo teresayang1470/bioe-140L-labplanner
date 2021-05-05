@@ -23,6 +23,7 @@ function add_sample_row() {
     var t4 = document.createElement("input");
     var elution_vol = row.insertCell(3);
     t4.id = "elution_vol_" + sample_rows;
+    t4.value = "uL";
     elution_vol.appendChild(t4);
     
     var t5 = document.createElement("input");

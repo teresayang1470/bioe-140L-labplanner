@@ -19,19 +19,22 @@
 <body>
     <h2>2. Gel</h2>
         <label for="protocol">Experiment Name: </label>
-        <input type="text" id="expt_name" name="expt_name"><br><br>
-        <label for="protocol">Part Name: </label>
+        <input type="text" id="expt_name" name="expt_name" placeholder="ex. &quot;APAP3&quot;"><br><br>
+        <label for="protocol">Name of Parts: </label>
         <input type="text" id="part_name" name="part_name" placeholder="ex. &quot;ortholog1-5&quot;">
         <br><br>
         <label for="protocol">Source: </label>
-        <input type="text" id="source" name="source"><br><br><br><br>
+        <input type="text" id="source" name="source" placeholder="ex. &quot;thermocycler&quot;"><br><br><br><br>
 
         <label>Samples:</label><br><br>
         <table id="samples">
           <tr>
-            <th>reaction</th>
-            <th>size</th>
-            <th>product</th>
+            <th class="tooltip">reaction
+                <span class="tooltiptext">label or name of PCR reaction</span></th>
+            <th class="tooltip">size
+                <span class="tooltiptext">size of PCR product (bp)</span></th>
+            <th class="tooltip">product
+                <span class="tooltiptext">label or name of PCR product</span></th>
 
           </tr>
           <tr>

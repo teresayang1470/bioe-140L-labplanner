@@ -64,10 +64,11 @@ function add_dest_row() {
     var t2 = document.createElement("input");
     var concentration = row.insertCell(1);
     t2.id = "concentration_" + dest_rows;
+    t2.value = "uM";
     concentration.appendChild(t2);
     
     var t3 = document.createElement("input");
-    var location = row.insertCell(1);
+    var location = row.insertCell(2);
     t3.id = "dest_loc_" + dest_rows;
     location.appendChild(t3);
 }

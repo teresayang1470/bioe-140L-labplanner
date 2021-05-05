@@ -19,8 +19,8 @@
 <body>
     <h2>1. PCR</h2>
         <label for="protocol">Experiment Name: </label>
-        <input type="text" id="expt_name" name="expt_name"><br><br>
-        <label for="protocol">Part Name: </label>
+        <input type="text" id="expt_name" name="expt_name" placeholder="ex. &quot;APAP3&quot;"><br><br>
+        <label for="protocol">Name of Parts: </label>
         <input type="text" id="part_name" name="part_name" placeholder="ex. &quot;ortholog1-5&quot;">
         <br><br>
         <label for="protocol">Protocol: </label>
@@ -71,11 +71,16 @@
         <label>Samples:</label><br><br>
         <table id="samples">
           <tr>
-            <th>label</th>
-            <th>primer1</th>
-            <th>primer2</th>
-            <th>template</th>
-            <th>product</th>
+            <th class="tooltip">label
+                <span class="tooltiptext">label on tube</span></th>
+            <th class="tooltip">primer1
+                <span class="tooltiptext">forward oligo</span></th>
+            <th class="tooltip">primer2
+                <span class="tooltiptext">reverse oligo</span></th>
+            <th class="tooltip">template
+                <span class="tooltiptext">name of template DNA</span></th>
+            <th class="tooltip">product
+                <span class="tooltiptext">name of PCR product</span></th>
           </tr>
           <tr>
             <td><input type="text" id="label_1" name="label_1"></td>
@@ -108,7 +113,8 @@
         <table id="source">
           <tr>
             <th>label</th>
-            <th>location</th>
+            <th class="tooltip">location
+                <span class="tooltiptext">name of box and space that tube is in</span></th>
           </tr>
           <tr>
             <td><input type="text" id="src_label_1" name="src_label_1" value=></td>
@@ -133,21 +139,22 @@
           <tr>
             <th>label</th>
             <th>concentration</th>
-            <th>location</th>
+            <th class="tooltip">location
+                <span class="tooltiptext">name of box and space that tube will be in</span></th>
           </tr>
           <tr>
             <td><input type="text" id="dest_label_1" name="dest_label_1" value=></td>
-            <td><input type="text" id="concentration_1" name="concentration_1" value=></td>
+            <td><input type="text" id="concentration_1" name="concentration_1" value="uM"></td>
             <td><input type="text" id="dest_loc_1" name="dest_loc_1"></td>
           </tr>
           <tr>
             <td><input type="text" id="dest_label_2" name="dest_label_2"></td>
-            <td><input type="text" id="concentration_2" name="concentration_2" value=></td>
+            <td><input type="text" id="concentration_2" name="concentration_2" value="uM"></td>
             <td><input type="text" id="dest_loc_2" name="dest_loc_2"></td>
           </tr>
           <tr>
             <td><input type="text" id="dest_label_3" name="dest_label_3"></td>
-            <td><input type="text" id="concentration_3" name="concentration_3" value=></td>
+            <td><input type="text" id="concentration_3" name="concentration_3" value="uM"></td>
             <td><input type="text" id="dest_loc_3" name="dest_loc_3"></td>
           </tr>
         </table>

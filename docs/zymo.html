@@ -19,42 +19,46 @@
 <body>
     <h2>3. Zymo</h2>
         <label for="protocol">Experiment Name: </label>
-        <input type="text" id="expt_name" name="expt_name"><br><br>
-        <label for="protocol">Part Name: </label>
+        <input type="text" id="expt_name" name="expt_name" placeholder="ex. &quot;APAP3&quot;"><br><br>
+        <label for="protocol">Name of Parts: </label>
         <input type="text" id="part_name" name="part_name" placeholder="ex. &quot;ortholog1-5&quot;">
         <br><br>
         <label for="protocol">Source: </label>
-        <input type="text" id="source" name="source"><br><br><br><br>
+        <input type="text" id="source" name="source" placeholder="ex. &quot;Freezer PCR rack&quot;"><br><br><br><br>
 
         <label>Samples:</label><br><br>
         <table id="samples">
           <tr>
-            <th>reaction</th>
-            <th>label</th>
-            <th>side_label</th>
-            <th>elution_volume</th>
-            <th>destination</th>
+            <th class="tooltip">reaction
+                <span class="tooltiptext">label or name of PCR reaction</span></th>
+            <th class="tooltip">label
+                <span class="tooltiptext">label for top of elution column</span></th>
+            <th class="tooltip">side_label
+                <span class="tooltiptext">label for side of elution tube</span></th>
+            <th>elution_volume
+            <th class="tooltip">destination
+                <span class="tooltiptext">name of box and space that tube will be in</span></th>
 
           </tr>
           <tr>
             <td><input type="text" id="rxn_1" name="rxn_1"></td>
             <td><input type="text" id="label_1" name="label_1"></td>
             <td><input type="text" id="side_label_1" name="side_label_1"></td>
-            <td><input type="text" id="elution_vol_1" name="elution_vol_1"></td>
+            <td><input type="text" id="elution_vol_1" name="elution_vol_1" value="uL"></td>
             <td><input type="text" id="destination_1" name="destination_1"></td>
           </tr>
           <tr>
               <td><input type="text" id="rxn_2" name="rxn_2"></td>
               <td><input type="text" id="label_2" name="label_2"></td>
               <td><input type="text" id="side_label_2" name="side_label_2"></td>
-              <td><input type="text" id="elution_vol_2" name="elution_vol_2"></td>
+              <td><input type="text" id="elution_vol_2" name="elution_vol_2" value="uL"></td>
               <td><input type="text" id="destination_2" name="destination_2"></td>
           </tr>
           <tr>
               <td><input type="text" id="rxn_3" name="rxn_3"></td>
               <td><input type="text" id="label_3" name="label_3"></td>
               <td><input type="text" id="side_label_3" name="side_label_3"></td>
-              <td><input type="text" id="elution_vol_3" name="elution_vol_3"></td>
+              <td><input type="text" id="elution_vol_3" name="elution_vol_3" value="uL"></td>
               <td><input type="text" id="destination_3" name="destination_3"></td>
           </tr>
         </table>

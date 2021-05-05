@@ -81,3 +81,36 @@ input[type=submit] {
     font-family: "Calibri";
     font-size: "12pt";
 }
+
+.tooltip {
+    position: relative;
+/*    display: inline-block;*/
+/*    border-bottom: 1px dotted black;*/
+    text-decoration:underline;
+    text-underline-offset:2px;
+    text-decoration-style: dotted;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+  /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    font-size:10pt;
+    font-style:normal;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
