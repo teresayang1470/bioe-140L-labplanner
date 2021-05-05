@@ -1,3 +1,4 @@
+// (+) button for sample section
 var sample_rows = 3;
 function add_sample_row() {
     sample_rows++;
@@ -31,6 +32,7 @@ function add_sample_row() {
     product.appendChild(t5);
 }
 
+// (+) button for source section
 var source_rows = 3;
 function add_source_row() {
     source_rows++;
@@ -49,6 +51,7 @@ function add_source_row() {
     location.appendChild(t2);
 }
 
+// (+) button for destination section
 var dest_rows = 3;
 function add_dest_row() {
     dest_rows++;
@@ -91,11 +94,11 @@ function generate_sheet() {
     program.appendChild(document.createElement("br"));
     
     // samples
+    // section heading
     var title = document.getElementById("sample_title");
-    var text = document.createTextNode("samples:");
-    title.style.fontWeight = "bold";
-    title.appendChild(text);
+    title.innerHTML = "<b>samples:</b>"
     var samples = document.getElementById("sheet_samples");
+    // table headings for each column
     var header = document.createElement("tr");
     samples.appendChild(header);
     var sample_label = document.createElement("th");
@@ -137,9 +140,7 @@ function generate_sheet() {
     
     // source
     var title = document.getElementById("source_title");
-    var text = document.createTextNode("source:");
-    title.style.fontWeight = "bold";
-    title.appendChild(text);
+    title.innerHTML = "<b>source:</b>"
     var source = document.getElementById("sheet_source");
     var header = document.createElement("tr");
     source.appendChild(header);
@@ -163,9 +164,7 @@ function generate_sheet() {
     
     // destination
     var title = document.getElementById("dest_title");
-    var text = document.createTextNode("destination:");
-    title.style.fontWeight = "bold";
-    title.appendChild(text);
+    title.innerHTML = "<b>destination:</b>"
     var dest = document.getElementById("sheet_dest");
     var header = document.createElement("tr");
     dest.appendChild(header);
