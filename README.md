@@ -34,3 +34,51 @@ This text can directly be copied and pasted into Word, although there are some f
 
 <img src="docs/images/pcr_word.png" width="500">
 
+## Zymo and Gel
+
+The structure for the Zymo and Gel pages are quite straightforward and follows the mechanism of the PCR page exactly. The input text boxes, "Generate LabSheet" button, and tool tips are all in place:
+
+<img src="docs/images/zymo.png">
+<img src="docs/images/gel.png">
+
+## Assembly
+
+For the most part, the Assembly page is identical to the previous three, with an additional input text box for users to specify the restriction enzyme being used:
+
+<img src="docs/images/assembly.png">
+
+However, it is worth noting that this is usually the LabSheet in which volume calculations for the master mix need to take place. The website will automatically do this for the users, based on how many entries are entered into the "sample" section. The backend program will calculated the number of entries, add 0.5, and multiply the the constancts provided in the "Labsheet planner" spreadsheet. For example, for the following input with 6 entries:
+
+<img src="docs/images/assembly_input.png" width="500">
+
+We get the following output:
+
+<img src="docs/images/assembly_generated.png" width="500">
+
+where we have 6.5 * 6 uL of ddH2O, 6.5 * 1 uL of ligase buffer, 6.5 * 0.5 uL of the restriction enzyme, and 6.5 * 1 uL of DNA.
+
+## Transform
+
+Once again, the Transform page is very similar to the other pages; however, there are two new checkboxes:
+
+<img src="docs/images/transform.png">
+
+The first checkbox is for the user to mark whether or not the products from the assembly step are coming from the thermocycler. If they are, there is no need to fill out the text boxes individually for each product; instead, this information will be denoted at the top of the "source" section.
+
+The second checkbox allows the user to mark if rescue is required. This will determine whether the "rescue_required:" text at the bottom of the sheet is followed by "yes" or "no."
+
+For example, with the following input:
+
+<img src="docs/images/transform_input.png" width="500">
+
+we have the following output:
+
+<img src="docs/images/transform_generated.png" width="500">
+
+Notice the "ligations on thermocycler" next to "source:" and the "rescue_required: no" at the bottom.
+
+## Files and Structure
+
+Each page has its own HTML and Javascript file; however, they all share one CSS file. With the exception of PCR, each one is named [step].html and [step_scripts].js. The HTML file for PCR is called "index.html" because this is the way GitHub Pages identifies the which page to host. The functions for adding additional text input boxes and for generating the final LabSheets are all contained in the corresponding Javascript files.
+
+
